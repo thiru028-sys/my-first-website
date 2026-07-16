@@ -1,9 +1,11 @@
 {
-  "hash": "c67982c6fed0caba38be8bb911fa8cd2",
+  "hash": "a10189bd6d4425cd3e08555b898219fa",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"my-first-website\"\n---\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Thiru Hobbies\"\n---\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n14 + 14\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 28\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Create angle values\ntheta = np.linspace(0, 2 * np.pi, 500)\n\n# Unit circle\nx = np.cos(theta)\ny = np.sin(theta)\n\n# Create figure\nplt.figure(figsize=(7, 7))\n\n# Draw the unit circle\nplt.plot(x, y, linewidth=2, label='Unit Circle')\n\n# Draw coordinate axes\nplt.axhline(0, color='black', linewidth=1)\nplt.axvline(0, color='black', linewidth=1)\n\n# Mark important points\npoints = {\n    \"(1,0)\": (1, 0),\n    \"(0,1)\": (0, 1),\n    \"(-1,0)\": (-1, 0),\n    \"(0,-1)\": (0, -1),\n}\n\nfor label, (px, py) in points.items():\n    plt.plot(px, py, 'ro')\n    plt.text(px + 0.03, py + 0.03, label, fontsize=10)\n\n# Formatting\nplt.title(\"Unit Circle\")\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.xlim(-1.2, 1.2)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n(-1.2, 1.2)\n```\n\n\n:::\n\n```{.python .cell-code}\nplt.ylim(-1.2, 1.2)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n(-1.2, 1.2)\n```\n\n\n:::\n\n```{.python .cell-code}\nplt.gca().set_aspect('equal', adjustable='box')\nplt.grid(True)\nplt.legend()\n\nplt.show()\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

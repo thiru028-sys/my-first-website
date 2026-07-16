@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "my-first-website",
+    "title": "Thiru Hobbies",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n14 + 14\n\n[1] 28\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Create angle values\ntheta = np.linspace(0, 2 * np.pi, 500)\n\n# Unit circle\nx = np.cos(theta)\ny = np.sin(theta)\n\n# Create figure\nplt.figure(figsize=(7, 7))\n\n# Draw the unit circle\nplt.plot(x, y, linewidth=2, label='Unit Circle')\n\n# Draw coordinate axes\nplt.axhline(0, color='black', linewidth=1)\nplt.axvline(0, color='black', linewidth=1)\n\n# Mark important points\npoints = {\n    \"(1,0)\": (1, 0),\n    \"(0,1)\": (0, 1),\n    \"(-1,0)\": (-1, 0),\n    \"(0,-1)\": (0, -1),\n}\n\nfor label, (px, py) in points.items():\n    plt.plot(px, py, 'ro')\n    plt.text(px + 0.03, py + 0.03, label, fontsize=10)\n\n# Formatting\nplt.title(\"Unit Circle\")\nplt.xlabel(\"x\")\nplt.ylabel(\"y\")\nplt.xlim(-1.2, 1.2)\n\n(-1.2, 1.2)\n\nplt.ylim(-1.2, 1.2)\n\n(-1.2, 1.2)\n\nplt.gca().set_aspect('equal', adjustable='box')\nplt.grid(True)\nplt.legend()\n\nplt.show()"
   },
   {
     "objectID": "about.html",
