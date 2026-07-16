@@ -1,5 +1,5 @@
 ---
-title: "my-first-website"
+title: "Thiru Hobbies"
 ---
 
 This is a Quarto website.
@@ -7,5 +7,51 @@ This is a Quarto website.
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{r}
-1 + 1
+14 + 14
+```
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Create angle values
+theta = np.linspace(0, 2 * np.pi, 500)
+
+# Unit circle
+x = np.cos(theta)
+y = np.sin(theta)
+
+# Create figure
+plt.figure(figsize=(7, 7))
+
+# Draw the unit circle
+plt.plot(x, y, linewidth=2, label='Unit Circle')
+
+# Draw coordinate axes
+plt.axhline(0, color='black', linewidth=1)
+plt.axvline(0, color='black', linewidth=1)
+
+# Mark important points
+points = {
+    "(1,0)": (1, 0),
+    "(0,1)": (0, 1),
+    "(-1,0)": (-1, 0),
+    "(0,-1)": (0, -1),
+}
+
+for label, (px, py) in points.items():
+    plt.plot(px, py, 'ro')
+    plt.text(px + 0.03, py + 0.03, label, fontsize=10)
+
+# Formatting
+plt.title("Unit Circle")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.xlim(-1.2, 1.2)
+plt.ylim(-1.2, 1.2)
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True)
+plt.legend()
+
+plt.show()
 ```
